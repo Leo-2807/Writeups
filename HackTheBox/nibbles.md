@@ -1,6 +1,6 @@
-#NIBBLES
+# NIBBLES
 
-##Enumeration
+## Enumeration
 
 Doing the nmap scan we get 2 open ports
 
@@ -43,7 +43,7 @@ Taking a look at the source code of the http page we find a very interesting lin
 ```
 So we know that there is a nibbleblog directory which we can explore
 
-Running gobuster on the ```/nibbleblog\``` directory 
+Running gobuster on the ```/nibbleblog/``` directory 
 
 ```
 ┌──(kali㉿kali)-[~/Downloads/hackthebox/nibbles]
@@ -65,11 +65,11 @@ Opening the ```/admin.php``` we find a login page
 While taking a look at the other directories and files I found that the username is ```admin``` and also that the maximum number of tries that can be done before our ip gets blacklisted is 5 
 So that means we cannot bruteforce the password with burpsuit or hydra 
 
-##LOGIN
+## LOGIN
 
 Now we can write a script to generate random ip's
 
-```
+```python
 #!/usr/bin/env python3
 
 from random import randint
@@ -156,7 +156,7 @@ Alternatively we can also try some very common passwords
 
 The password we find is ```nibbles```
 
-##SHELL
+## SHELL
 
 Now we need to upload a reverse shell for I found this article which tells exactly how to upload a reverse shell in nibbleblog https://wikihak.com/how-to-upload-a-shell-in-nibbleblog-4-0-3/
 
@@ -182,7 +182,7 @@ whoami
 nibbler
 ```
 
-##USER --> ROOT
+## USER --> ROOT
 
 Using the command ```sudo -l ``` to check what sudo permissions our user have
 ```
