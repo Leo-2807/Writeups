@@ -98,7 +98,7 @@ I ran gobuster with the common.txt wordlist
 
 Again nothing that can be useful
 
-Opening the webpage on port 80 we find a login page of elastix
+Opening the webpage on port 80 we find a login page of elastix but we do not have the username and password yet
 Using searchsploit to search for exploits for elastix
 
 ```
