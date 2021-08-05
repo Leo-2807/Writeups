@@ -190,7 +190,7 @@ On using the url ```https://10.10.10.7/vtigercrm/graph.php?current_language=../.
 
 Well the webpage is quite messy so I read the source page with ```CTRL+U```
 
-On this page we find we find several usernames and passwords
+On this page we find several usernames and passwords
 
 ```
 # AMPDBNAME=asterisk
