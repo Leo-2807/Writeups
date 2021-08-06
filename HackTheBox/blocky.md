@@ -125,7 +125,7 @@ notch@Blocky:~$ cat user.txt
 
 ## USER --> ROOT
 
-Using the command ```sudo -l``` to check sudo previleges of our user
+Using the command ```sudo -l``` to check sudo previleges of our user and we have got all of them
 
 ```
 notch@Blocky:~$ sudo -l
