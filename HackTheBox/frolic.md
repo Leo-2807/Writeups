@@ -456,7 +456,7 @@ Now I checked whether it is vulnerable to buffer overflow or not
 ```
 www-data@frolic:/home/ayush/.binary$ ./rop $(python -c 'print "abcde"*500')
 ./rop $(python -c 'print "a"*500')
-Segmentation faulte
+Segmentation fault
 ```
 Okay so we can use buffer overflow
 
