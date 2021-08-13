@@ -451,7 +451,7 @@ www-data@frolic:/home/ayush/.binary$ ./rop $(python -c 'print "abcde"')
 [+] Message sent: abcde
 ```
 
-Now I checked whether it is vulnerable to stackoverflow or not
+Now I checked whether it is vulnerable to buffer overflow or not
 
 ```
 www-data@frolic:/home/ayush/.binary$ ./rop $(python -c 'print "abcde"*500')
