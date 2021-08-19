@@ -126,7 +126,7 @@ Magento CE < 1.9.0.1 - (Authenticated) Remote Code Execut | php/webapps/37811.py
 Shellcodes: No Results
 ```
 
-I download the exploit and run it
+I download the exploit and after making some changes and resolving errors I run it
 
 ```
 ┌──(kali㉿kali)-[~/Downloads/hackthebox/swagshop]
