@@ -44,7 +44,7 @@ Adding the 2 domains to `/etc/hosts` file
 
 'https://brainfuck.htb/'
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck2.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck2.png)
 
 There are two things that we find on this webpage 
 
@@ -174,7 +174,7 @@ I tried to search for exploits for all three of these. After some failed attempt
 
 `WordPress Plugin WP Support Plus Responsive Ticket System 7.1.3 - Privilege Escalat | php/webapps/41006.txt`
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck3.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck3.png)
 
 I copy the html form to a new file and edit it to make it wotk.
 
@@ -196,23 +196,23 @@ Serving HTTP on 0.0.0.0 port 8000 ...
 ```
 Now open the form on your web browser
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck4.png]
+![]([https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck4.png)
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck5.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck5.png)
 
 And it worked!
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck6.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck6.png)
 
 ## SMTP CREDENTIALS
 
 While looking through the website I found smtp creds filled in 
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck7.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck7.png)
 
 But the password was not visible so I used `Inspect Element` option 
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck8.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck8.png)
 
 `user=orestis & password="kHGuERB29DNiNE"`
 
@@ -313,19 +313,19 @@ Regards
 
 'https://sup3rs3cr3t.brainfuck.htb/'
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck1.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck1.png)
 
 Logging in with the creds
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck9.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck9.png)
 
 Now I open the ssh thread
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck10.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck10.png)
 
 So we can get the ssh key in the encrypted thread which is key
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck11.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck11.png)
 
 ## DECRYPTING
 
@@ -338,7 +338,7 @@ I use [Cyber Chef](https://gchq.github.io/CyberChef/) to decrypt the messages
 
 Putting https as key gives us the beginning of the real key 
 
-![https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck12.png]
+![](https://github.com/Leo-2807/Writeups/blob/main/images/brainfuck12.png)
 
 The name of the box is `brainfuck` and the key starts with `fuckm` so I guessed the rest of the key  `fuckmybrain`
 
