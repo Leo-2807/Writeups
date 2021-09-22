@@ -55,7 +55,7 @@ On googling a bit I found this [article](https://simpleinfosec.com/2018/05/27/mo
 
 ![](https://github.com/Leo-2807/Writeups/blob/main/images/tartarsauce5.png)
 
-I tried to use this password an dcrack it if it was encoded but it did not lead anywhere and it's just a rabbit hole
+I tried to use this password and crack it if it was encoded but it did not lead anywhere and it's just a rabbit hole
 
 ## WORDPRESS
 
@@ -150,7 +150,56 @@ Maybe there is plugin which wpscan cannot find with `passive methods`.
 ┌──(kali㉿kali)-[~/Downloads/hackthebox/tartarsauce]
 └─$ wpscan --url http://10.10.10.88/webservices/wp -e ap --plugins-detection-aggressive
 ...snip...
+[+] Enumerating All Plugins (via Aggressive Methods)
+ Checking Known Locations - Time: 01:42:06 <> (95088 / 95088) 100.00% Time: 01:42:06
+[+] Checking Plugin Versions (via Passive and Aggressive Methods)
 
+[i] Plugin(s) Identified:
+
+[+] akismet
+ | Location: http://10.10.10.88/webservices/wp/wp-content/plugins/akismet/
+ | Last Updated: 2021-09-03T16:53:00.000Z
+ | Readme: http://10.10.10.88/webservices/wp/wp-content/plugins/akismet/readme.txt
+ | [!] The version is out of date, the latest version is 4.1.12
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/akismet/, status: 200
+ |
+ | Version: 4.0.3 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/akismet/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/akismet/readme.txt
+
+[+] brute-force-login-protection
+ | Location: http://10.10.10.88/webservices/wp/wp-content/plugins/brute-force-login-protection/
+ | Latest Version: 1.5.3 (up to date)
+ | Last Updated: 2017-06-29T10:39:00.000Z
+ | Readme: http://10.10.10.88/webservices/wp/wp-content/plugins/brute-force-login-protection/readme.txt
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/brute-force-login-protection/, status: 403
+ |
+ | Version: 1.5.3 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/brute-force-login-protection/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/brute-force-login-protection/readme.txt
+
+[+] gwolle-gb
+ | Location: http://10.10.10.88/webservices/wp/wp-content/plugins/gwolle-gb/
+ | Last Updated: 2021-09-14T09:01:00.000Z
+ | Readme: http://10.10.10.88/webservices/wp/wp-content/plugins/gwolle-gb/readme.txt
+ | [!] The version is out of date, the latest version is 4.1.2
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/gwolle-gb/, status: 200
+ |
+ | Version: 2.3.10 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/gwolle-gb/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - http://10.10.10.88/webservices/wp/wp-content/plugins/gwolle-gb/readme.txt
 ```
 
 On reading through readme.txt for all the plugins something interesting can be found at `http://10.10.10.88/webservices/wp/wp-content/plugins/gwolle-gb/readme.txt`
