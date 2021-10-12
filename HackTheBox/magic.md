@@ -75,7 +75,7 @@ I run another gobuster scan on the `/images` directory and find `/uploads` direc
 └─$ gobuster dir -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -u http://10.10.10.185/images -q -t 100 -x php,html,txt,phtml,png
 /uploads              (Status: 301) [Size: 321] [--> http://10.10.10.185/images/uploads/]
 ```
-But this directory also gives `403 forbidden error` , So I gobuster scan again and this time we get the image we uploaded and it is accessible to us.
+But this directory also gives `403 forbidden error` , So I use gobuster scan again and this time we get the image we uploaded and it is accessible to us.
 
 ```bash
 ┌──(kali㉿kali)-[~/Downloads/hackthebox/magic]
