@@ -63,7 +63,7 @@ opening the domain with https gives the same page but opening it with http retue
 
 ![](https://github.com/Leo-2807/Writeups/blob/main/images/mango4.png)
 
-I used sqlmap t see if there was some sql injection that the form was vulnerable to but it was not.
+I used sqlmap to see if there was some sql injection that the form was vulnerable to but it was not.
 Since there was a injection tag on the box I google searched for mango sql injection and found that mangoDB is vulnerable to `nosql injection`.
 
 I used this [cheatsheet](https://book.hacktricks.xyz/pentesting-web/nosql-injection) to look for a injection that works.
@@ -88,7 +88,7 @@ I copied the script and made some changes for it to work.
 
 On running the script we find two usernames `admin and mango` but no password.  
 
-On reading again it seems like regex does support certain characters.
+On reading again it seems like regex does not support certain characters.
 So I write a script to find passwords for the usernames we got.
 
 ```python
